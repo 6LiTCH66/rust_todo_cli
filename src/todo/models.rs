@@ -1,7 +1,7 @@
 use crate::schema::todos;
 use cli_table::{format::Justify, Table};
 
-#[derive(Queryable, Debug, AsChangeset, Table)]
+#[derive(Queryable, Debug, AsChangeset, Table, Clone)]
 pub struct Todo{
     #[table(title = "ID", justify = "Justify::Right")]
     pub id: i32,
